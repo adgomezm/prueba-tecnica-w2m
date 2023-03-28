@@ -1,0 +1,21 @@
+<div>
+  <div class="header"><h1>LISTA DE HÉROES</h1></div>
+  <div class="search-bar">
+    <mat-form-field appearance="outline">
+      <mat-label>Busca un superhéroe</mat-label>
+      <input matInput (keyup)="buscarHero($event)" class="search" />
+    </mat-form-field>
+    <div><button mat-raised-button (click)="openDialog('Añadir')">Añadir Héroe</button></div>
+  </div>
+  <mat-list role="list" class="list">
+    <mat-list-item *ngFor="let item of heroesList" role="listitem" class="item">
+      <span matListItemTitle> {{ item.nombre }}</span>
+      <span matListItemLine>{{ item.franquicia }}</span>
+      <span matListItemLine>ID:{{ item.id }}</span>
+      <div class="data">
+        <button class="editar" mat-button (click)="openDialog('Editar', item)">Editar</button
+        ><button class="borrar" mat-button (click)="deleteHero(item)">Borrar</button>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</div>

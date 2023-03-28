@@ -1,0 +1,19 @@
+.dialog {
+  font-family: 'ubuntu', sans-serif;
+  padding: 14px;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+  font-size: 16px;
+  & button {
+    background: lightgray;
+
+    color: rgba(0, 0, 0, 0.8);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

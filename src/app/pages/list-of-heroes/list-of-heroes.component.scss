@@ -1,0 +1,45 @@
+.header {
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: 'ubuntu', sans-serif;
+}
+.search-bar {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  font-family: 'ubuntu', sans-serif;
+}
+.list {
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: center;
+  display: flex;
+}
+.item {
+  padding: 14px;
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 500px;
+  margin-bottom: 1px;
+  display: inline-table;
+}
+.data {
+  margin: 2px;
+  display: flex;
+
+  justify-content: right;
+  gap: 1rem;
+  font-size: 16px;
+  & button {
+    background: lightgray;
+
+    color: rgba(0, 0, 0, 0.8);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

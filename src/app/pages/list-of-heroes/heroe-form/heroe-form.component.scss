@@ -1,0 +1,40 @@
+.dialog {
+  font-family: 'ubuntu', sans-serif;
+  padding: 14px;
+}
+.form {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.field {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+.dialog-buttons {
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+  font-size: 16px;
+  & button {
+    background: lightgray;
+
+    color: rgba(0, 0, 0, 0.8);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+.text-button {
+  margin-top: 5px;
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.8);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

@@ -86,6 +86,7 @@
               "zone.js",
               "zone.js/testing"
             ],
+            "codeCoverage": true,
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -97,8 +98,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "2d60de7b-f9fe-41d2-b9ea-56bd16c1fef7",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

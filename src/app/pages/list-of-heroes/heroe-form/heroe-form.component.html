@@ -1,0 +1,29 @@
+<div class="dialog">
+  <h1 mat-dialog-title align="center">{{ data.opcion }} héroe</h1>
+  <div mat-dialog-content class="form" *ngIf="data.opcion === 'Editar'">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="newHero.nombre" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Franquicia</mat-label>
+      <input matInput [(ngModel)]="newHero.franquicia" />
+    </mat-form-field>
+  </div>
+  <div mat-dialog-content class="form" *ngIf="data.opcion === 'Añadir'">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="newHero.nombre" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Franquicia</mat-label>
+      <input matInput [(ngModel)]="newHero.franquicia" />
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions class="dialog-buttons">
+    <button mat-button color="accent" (click)="onNoClick()" class="cancel">Cancelar</button>
+    <button mat-button color="primary" (click)="onYesClick()" class="confirm" cdkFocusInitial>
+      {{ data.opcion }}
+    </button>
+  </div>
+</div>
